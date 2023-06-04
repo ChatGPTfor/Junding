@@ -138,16 +138,23 @@ export function SideBar(props: { className?: string }) {
         />
         <IconButton
           icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          text={shouldNarrow ? undefined : "TX数字人"}
           className={styles["sidebar-bar-button"]}
-          onClick={() => showToast(Locale.WIP)}
+          onClick={() => showToast("正在跳转数字人，请稍等")}
           shadow
         />
-          <IconButton
+         <IconButton
           icon={<PluginIcon />}
-          text={shouldNarrow ? undefined : Locale.Plugin.Name}
+          text={shouldNarrow ? undefined : "RW视频"}
           className={styles["sidebar-bar-button"]}
-          onClick={() => window.location.href("#")}
+          onClick={() => showToast("错误的域配置")}
+          shadow
+        />
+       <IconButton
+          icon={<PluginIcon />}
+          text={shouldNarrow ? undefined : "HUMAN虚拟人"}
+          className={styles["sidebar-bar-button"]}
+          onClick={() => showToast("正在跳转虚拟人，请稍等")}
           shadow
         />
       </div>
